@@ -1,6 +1,12 @@
-export default function Componente(){
-    return<>
-        <h1>Titulo</h1>
-        <h2>subtitulo</h2>
+export default function Componente(props){
+    console.log(props)
+    return props.pequeno?<>
+        <h1>{props.principal}</h1>
+        <h2>{props.secundario}</h2>
+    </>
+    :
+    <>
+        <p>{props.principal}</p>
+        <p>{props.secundario}</p>
     </>
 }
